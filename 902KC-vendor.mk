@@ -435,6 +435,12 @@ PRODUCT_COPY_FILES += \
     vendor/kyocera/902KC/proprietary/vendor/lib/soundfx/libqcvirt.so:system/vendor/lib/soundfx/libqcvirt.so \
     vendor/kyocera/902KC/proprietary/vendor/lib/soundfx/libreverbwrapper.so:system/vendor/lib/soundfx/libreverbwrapper.so \
     vendor/kyocera/902KC/proprietary/vendor/lib/soundfx/libvisualizer.so:system/vendor/lib/soundfx/libvisualizer.so
-BUILD_PREBUILT += \
-    vendor/kyocera/902KC/proprietary/vendor/app/IrDATransfer/IrDATransfer.apk:system/vendor/app/IrDATransfer/IrDATransfer.apk \
-    vendor/kyocera/902KC/proprietary/vendor/app/TimeService/TimeService.apk:system/vendor/app/TimeService/TimeService.apk \
+    
+# Prebuilt APKs
+PRODUCT_PACKAGES += \
+    IrDATransfer \
+    TimeService
+
+# Prebuilt privileged APKs
+PRODUCT_PACKAGES += \
+    com.qualcomm.location
