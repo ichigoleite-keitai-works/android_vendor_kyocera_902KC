@@ -28,12 +28,12 @@ PRODUCT_COPY_FILES += \
     vendor/kyocera/902KC/proprietary/etc/firmware/cpp_firmware_v1_2_0.fw:system/etc/firmware/cpp_firmware_v1_2_0.fw \
     vendor/kyocera/902KC/proprietary/etc/firmware/cpp_firmware_v1_4_0.fw:system/etc/firmware/cpp_firmware_v1_4_0.fw \
     vendor/kyocera/902KC/proprietary/etc/firmware/wlan/prima/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    vendor/kyocera/902KC/proprietary/firmware/image/venus.b00:system/firmware/image/venus.b00 \
-    vendor/kyocera/902KC/proprietary/firmware/image/venus.b01:system/firmware/image/venus.b01 \
-    vendor/kyocera/902KC/proprietary/firmware/image/venus.b02:system/firmware/image/venus.b02 \
-    vendor/kyocera/902KC/proprietary/firmware/image/venus.b03:system/firmware/image/venus.b03 \
-    vendor/kyocera/902KC/proprietary/firmware/image/venus.b04:system/firmware/image/venus.b04 \
-    vendor/kyocera/902KC/proprietary/firmware/image/venus.mdt:system/firmware/image/venus.mdt \
+    vendor/kyocera/902KC/proprietary/rootfs/firmware/image/venus.b00:firmware/image/venus.b00 \
+    vendor/kyocera/902KC/proprietary/rootfs/firmware/image/venus.b01:firmware/image/venus.b01 \
+    vendor/kyocera/902KC/proprietary/rootfs/firmware/image/venus.b02:firmware/image/venus.b02 \
+    vendor/kyocera/902KC/proprietary/rootfs/firmware/image/venus.b03:firmware/image/venus.b03 \
+    vendor/kyocera/902KC/proprietary/rootfs/firmware/image/venus.b04:firmware/image/venus.b04 \
+    vendor/kyocera/902KC/proprietary/rootfs/firmware/image/venus.mdt:firmware/image/venus.mdt \
     vendor/kyocera/902KC/proprietary/vendor/bin/adsprpcd:system/vendor/bin/adsprpcd \
     vendor/kyocera/902KC/proprietary/vendor/bin/bluetooth_diag:system/vendor/bin/bluetooth_diag \
     vendor/kyocera/902KC/proprietary/vendor/bin/btnvtool:system/vendor/bin/btnvtool \
