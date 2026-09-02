@@ -34,8 +34,6 @@ PRODUCT_COPY_FILES += \
     vendor/kyocera/902KC/proprietary/firmware/image/venus.b03:system/firmware/image/venus.b03 \
     vendor/kyocera/902KC/proprietary/firmware/image/venus.b04:system/firmware/image/venus.b04 \
     vendor/kyocera/902KC/proprietary/firmware/image/venus.mdt:system/firmware/image/venus.mdt \
-    vendor/kyocera/902KC/proprietary/vendor/app/IrDATransfer/IrDATransfer.apk:system/vendor/app/IrDATransfer/IrDATransfer.apk \
-    vendor/kyocera/902KC/proprietary/vendor/app/TimeService/TimeService.apk:system/vendor/app/TimeService/TimeService.apk \
     vendor/kyocera/902KC/proprietary/vendor/bin/adsprpcd:system/vendor/bin/adsprpcd \
     vendor/kyocera/902KC/proprietary/vendor/bin/bluetooth_diag:system/vendor/bin/bluetooth_diag \
     vendor/kyocera/902KC/proprietary/vendor/bin/btnvtool:system/vendor/bin/btnvtool \
@@ -437,3 +435,6 @@ PRODUCT_COPY_FILES += \
     vendor/kyocera/902KC/proprietary/vendor/lib/soundfx/libqcvirt.so:system/vendor/lib/soundfx/libqcvirt.so \
     vendor/kyocera/902KC/proprietary/vendor/lib/soundfx/libreverbwrapper.so:system/vendor/lib/soundfx/libreverbwrapper.so \
     vendor/kyocera/902KC/proprietary/vendor/lib/soundfx/libvisualizer.so:system/vendor/lib/soundfx/libvisualizer.so
+BUILD_PREBUILT += \
+    vendor/kyocera/902KC/proprietary/vendor/app/IrDATransfer/IrDATransfer.apk:system/vendor/app/IrDATransfer/IrDATransfer.apk \
+    vendor/kyocera/902KC/proprietary/vendor/app/TimeService/TimeService.apk:system/vendor/app/TimeService/TimeService.apk \
