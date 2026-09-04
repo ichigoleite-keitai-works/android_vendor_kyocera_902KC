@@ -1,0 +1,14 @@
+# This software is contributed or developed by KYOCERA Corporation.
+# (C) 2018 KYOCERA Corporation
+
+on boot
+    chown system system /dev/dtvtuner_pm0
+    chmod 0660 /dev/dtvtuner_pm0
+    chown system system /dev/spidev3.1
+    chmod 0660 /dev/spidev3.1
+
+on post-fs-data
+    mkdir /data/system/dtvtuner
+    chown system system /data/system/dtvtuner
+    restorecon_recursive /data/system/dtvtuner
+

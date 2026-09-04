@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+** This software is contributed or developed by KYOCERA Corporation.
+** (C) 2019 KYOCERA Corporation
+**
+*/
+-->
+
+<FeatureConfig>
+    <Feature name="wallpaper">
+        <config key="Wallpaper_IsWhiteModel" value="false" />
+        <config key="Wallpaper_Brand" value="false" />
+        <config key="Wallpaper_Model" value="false" />
+    </Feature>
+</FeatureConfig>

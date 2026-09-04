@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+** This software is contributed or developed by KYOCERA Corporation.
+** (C) 2019 KYOCERA Corporation
+**
+*/
+-->
+
+<FeatureConfig>
+    <Feature name="sublcd">
+        <config key="DefaultWakeupTime" value="5000" />
+        <config key="DefaultWakeupTimeFilpClose" value="0" />
+        <config key="DefaultClockType" value="0" />
+        <config key="DisplayWidth" value="128" />
+        <config key="DisplayHeight" value="36" />
+        <config key="BlinkInterval" value="500" />
+        <config key="MarqueeStartTime" value="2000" />
+        <config key="MarqueeCount" value="3" />
+        <config key="MarqueeFinishCount" value="10" />
+        <config key="MarqueeFPS" value="6" />
+        <config key="MarqueeDistance" value="8" />
+
+        <config key="DoNotTimeoutInMarquee" value="false" />
+        <config key="DispClockWhenInterruptFinished" value="false" />
+        <config key="FeaturePreview" value="false" />
+        <config key="FeatureDisplayAlwaysOn" value="false" />
+        <config key="FeatureAnalogClock" value="false" />
+        <config key="FeatureReadout" value="false" />
+        <config key="FeatureOutdoorWeather" value="false" />
+        <config key="FeatureOutdoorBarometer" value="false" />
+        <config key="FeatureOutdoorThermometer" value="false" />
+        <config key="FeatureOutdoorCompass" value="false" />
+        <config key="FeatureOutdoorTide" value="false" />
+        <config key="FeatureOutdoorSunMoon" value="false" />
+        <config key="FeatureOutdoorPedometer" value="true" />
+        <config key="FeatureInfosignPhoneMemo" value="true" />
+        <config key="FeatureInfosignCount" value="false" />
+        <config key="FeatureKcMannerMode" value="true" />
+        <config key="FeatureStatusAlarm" value="false" />
+        <config key="FeatureStatusPhoneMemo" value="false" />
+        <config key="FeatureBatteryCare" value="true" />
+        <config key="FeatureStatusBatteryCharge" value="false" />
+        <config key="FeatureStatusPedometer" value="true" />
+        <config key="FeatureStatusWifi" value="true" />
+        <config key="FeatureStatusWifiTethering" value="true" />
+        <config key="FeatureKeyLongPress" value="false" />
+        <config key="FeatureBackLight" value="false" />
+        <config key="FeatureMarquee" value="true" />
+        <config key="ScreenBackGroundBlack" value="true" />
+        <config key="ForwardKey" value="true" />
+        <config key="BackwardKey" value="false" />
+        <config key="ReadoutKey" value="false" />
+
+        <config key="InfosignPackageNamePhone" value="com.android.server.telecom" />
+        <config key="InfosignGroupIDPhone" value="missedcall" />
+        <config key="InfoSignPackageNameMail" value="jp.kyocera.fpmail" />
+        <config key="InfosignGroupIDMail" value="" />
+        <config key="InfosignPackageNameSMS" value="" />
+        <config key="InfosignGroupIDSMS" value="" />
+        <config key="InfosignPackageNameEmergency" value="com.android.cellbroadcastreceiver" />
+        <config key="InfosignGroupIDEmergency" value="" />
+        <config key="InfosignPackageNamePhoneMemo" value="" />
+        <config key="InfosignGroupIDPhoneMemo" value="" />
+    </Feature>
+</FeatureConfig>

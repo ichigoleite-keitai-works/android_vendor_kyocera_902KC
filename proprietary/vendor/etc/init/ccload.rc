@@ -1,0 +1,9 @@
+# This software is contributed or developed by KYOCERA Corporation.
+# (C) 2018 KYOCERA Corporation
+#
+
+service ccload /vendor/bin/continuous_cpu_load 4
+	class core
+	user root
+	group root
+	disabled

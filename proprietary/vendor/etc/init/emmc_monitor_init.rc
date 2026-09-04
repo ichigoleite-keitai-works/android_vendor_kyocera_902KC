@@ -1,0 +1,13 @@
+# This software is contributed or developed by KYOCERA Corporation.
+# (C) 2018 KYOCERA Corporation
+
+service emmc_err_monitor /vendor/bin/emmc_err_monitor
+    class late_start
+    user system
+    group system
+
+service emmc_dmy_read /vendor/bin/emmc_dmy_read
+    class late_start
+    user system
+    group system
+

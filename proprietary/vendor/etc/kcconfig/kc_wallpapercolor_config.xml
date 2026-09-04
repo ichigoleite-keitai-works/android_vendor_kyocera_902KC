@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+** This software is contributed or developed by KYOCERA Corporation.
+** (C) 2019 KYOCERA Corporation
+**
+*/
+-->
+
+<WallpaperColorVariationConfig>
+    <!-- Wallpaper Default-->
+    <ColorVariations isDefault="1">
+        <ColorVariation color="0" value="k_la_wallpaper_01" />
+        <ColorVariation color="1" value="k_la_wallpaper_02" />
+        <ColorVariation color="2" value="k_la_wallpaper_03" />
+    </ColorVariations>
+    <!-- Wallpaper Model-->
+    <ColorVariations>
+        <ModelConditions>
+            <model>0</model>
+        </ModelConditions>
+    </ColorVariations>
+    <ColorVariations>
+        <ModelConditions>
+            <model>1</model>
+        </ModelConditions>
+    </ColorVariations>
+    <!-- Wallpaper Brand-->
+    <ColorVariations>
+        <BrandConditions>
+            <brand>UNKNOWN</brand>
+        </BrandConditions>
+    </ColorVariations>
+    <!-- Wallpaper IsWhite-->
+    <ColorVariations isWhite="0">
+    </ColorVariations>
+</WallpaperColorVariationConfig>

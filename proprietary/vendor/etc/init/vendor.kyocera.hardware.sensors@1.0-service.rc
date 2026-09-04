@@ -1,0 +1,65 @@
+on post-fs-data
+    mkdir /data/vendor/sensors 0770 system system
+
+on boot
+    chown system system /dev/dailys_io_pedom
+    chmod 0660 /dev/dailys_io_pedom
+    chown system system /dev/dailys_io_vehicle
+    chmod 0660 /dev/dailys_io_vehicle
+    chown system system /dev/dailys_io_iwifi
+    chmod 0660 /dev/dailys_io_iwifi
+    chown system system /dev/tapdetect
+    chmod 0660 /dev/tapdetect
+    chown system system /dev/vhdetect_io
+    chmod 0660 /dev/vhdetect_io
+    chown system system /dev/kc_motion_sensor_io
+    chmod 0660 /dev/kc_motion_sensor_io
+    chown system system /dev/als_sensor
+    chmod 0660 /dev/als_sensor
+    chown system system /dev/ps_sensor
+    chmod 0660 /dev/ps_sensor
+    chown system system /dev/gs_sensor
+    chmod 0660 /dev/gs_sensor
+    chown system system /dev/underwater_detect
+    chmod 0660 /dev/underwater_detect
+    chown system system /dev/touch_submergence
+    chmod 0660 /dev/touch_submergence
+    start vendor.kc-sensor-sh
+
+# For LAPIS-micon ML630Q790
+
+#on property:init.svc.kc-sensor-sh=stopped
+#    start sensors_fwup
+
+#on property:init.svc.sensors_fwup=stopped
+#    start sensors-hal-1-0
+# service vendor.sensors_fwup /vendor/bin/sensors_fwup
+#     class core
+#     user system
+#     group system
+#     oneshot
+#     disabled
+
+service vendor.kc-sensor-sh /vendor/bin/init.kc.sensor.sh
+    class core
+    oneshot
+    disabled
+# For QuickLogic-micon EOSS3
+on property:init.svc.vendor.kc-sensor-sh=stopped
+    start vendor.sensors-hal-1-0
+
+# COMMON
+service kc-sensor-sh /vendor/bin/init.kc.sensor.sh
+    class core
+    user system
+    group system
+    oneshot
+    disabled
+
+service vendor.sensors-hal-1-0 /vendor/bin/hw/vendor.kyocera.hardware.sensors@1.0-service
+    class hal
+    user system
+    group system input
+    capabilities SYS_NICE
+    disabled
+

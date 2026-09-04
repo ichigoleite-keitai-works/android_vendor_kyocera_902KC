@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+** This software is contributed or developed by KYOCERA Corporation.
+** (C) 2019 KYOCERA Corporation
+-->
+
+<PregrantConfig>
+    <PregrantInfo>
+        <PackageName name="jp.softbank.mb.dmb" fixed="false" />
+        <Permissions>
+            <Permission>android.permission.RECEIVE_SMS</Permission>
+        </Permissions>
+    </PregrantInfo>
+    <PregrantInfo>
+        <PackageName name="com.redbend.dmClient" fixed="false" />
+        <Permissions>
+            <Permission>android.permission.READ_PHONE_STATE</Permission>
+            <Permission>android.permission.RECEIVE_SMS</Permission>
+            <Permission>android.permission.RECEIVE_WAP_PUSH</Permission>
+            <Permission>android.permission.WRITE_EXTERNAL_STORAGE</Permission>
+        </Permissions>
+    </PregrantInfo>
+    <PregrantInfo>
+        <PackageName name="jp.softbank.mb.tdrl" fixed="false" />
+        <Permissions>
+            <Permission>android.permission.RECEIVE_SMS</Permission>
+            <Permission>android.permission.WRITE_EXTERNAL_STORAGE</Permission>
+        </Permissions>
+    </PregrantInfo>
+</PregrantConfig>

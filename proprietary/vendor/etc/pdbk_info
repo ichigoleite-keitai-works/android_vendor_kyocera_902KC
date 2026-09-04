@@ -1,0 +1,6 @@
+<mail_package>jp.kyocera.fpmail</mail_package>
+<mail_activity>jp.kyocera.fpmail.WholeBackupActivity</mail_activity>
+<phonebook_accountname>Contacts</phonebook_accountname>
+<phonebook_accounttype>jp.kyocera.localcontacts</phonebook_accounttype>
+<calendar_accountname>Calendar</calendar_accountname>
+<calendar_accounttype>jp.kyocera.localcalendar</calendar_accounttype>

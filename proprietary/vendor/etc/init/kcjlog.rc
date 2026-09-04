@@ -1,0 +1,7 @@
+# This software is contributed or developed by KYOCERA Corporation.
+# (C) 2018 KYOCERA Corporation
+#
+
+on property:ro.build.date=*
+    write /sys/module/kcjlog/parameters/build_date ${ro.build.date}
+

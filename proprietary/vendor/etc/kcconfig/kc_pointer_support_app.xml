@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     This software is contributed or developed by KYOCERA Corporation.
+     (C) 2019 KYOCERA Corporation
+-->
+<pointerinfo downloadapp="1">
+    <app pkg="com.android.browser" cls="com.android.browser.BrowserActivity" status="0"/>
+    <app pkg="com.mobisystems.office.kyocera" status="1"/>
+    <app pkg="jp.softbank.mb.bizbrowser" status="0"/>
+    <app pkg="jp.softbank.mb.parentalcontrols" status="0"/>
+</pointerinfo>

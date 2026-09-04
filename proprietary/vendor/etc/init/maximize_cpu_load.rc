@@ -1,0 +1,9 @@
+# This software is contributed or developed by KYOCERA Corporation.
+# (C) 2018 KYOCERA Corporation
+#
+
+service fullfull /vendor/bin/maximize_cpu_load 4 100
+	class core
+	user root
+	group root
+	disabled

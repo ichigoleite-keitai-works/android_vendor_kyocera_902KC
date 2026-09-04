@@ -1,0 +1,445 @@
+######################################################################
+# Config file for DIAG clients
+#
+# Syntax:
+#   [App full path] param1 param2 param3 ...
+#
+# Example:
+#   vendor/bin/ktestXdiag 1 0 3
+######################################################################
+
+
+on property:kc.diag.status=start
+    class_start kc_diag
+
+on property:kc.diag.status=stop
+    class_stop kc_diag
+
+on property:sys.diagofflineservice=1
+    class_start kcd_diag
+
+on property:sys.diagofflineservice=0
+    class_stop kcd_diag
+
+
+######################################################################
+# For HW :0x0000-0x1FFF
+######################################################################
+#---------------------------------------------------------------------
+# i2c
+#---------------------------------------------------------------------
+service i2c_diag /vendor/bin/i2c_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# usb (USB_CC_LOGIC_IC)
+#---------------------------------------------------------------------
+service usbcc_diag /vendor/bin/usbcc_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# MEM
+#---------------------------------------------------------------------
+service kdiagdiag /vendor/bin/kdiagdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Keypad Driver
+#---------------------------------------------------------------------
+service key_diag /vendor/bin/key_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Switch IC Driver
+#---------------------------------------------------------------------
+service swic_diag /vendor/bin/swic_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Sensors
+#---------------------------------------------------------------------
+service sensors_diag /vendor/bin/sensors_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+service fingerprint_diag /vendor/bin/fingerprint_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# LED
+#---------------------------------------------------------------------
+service led_diag /vendor/bin/led_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# DISPLAY
+#---------------------------------------------------------------------
+service kdispdiag /vendor/bin/kdispdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+service ksubdispdiag /vendor/bin/ksubdispdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# TouchScreen
+#---------------------------------------------------------------------
+service ts_diag /vendor/bin/ts_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Felica/NFC
+#---------------------------------------------------------------------
+service kflcdiag /vendor/bin/kflcdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# DTV
+#---------------------------------------------------------------------
+service dtvtuner_diag /vendor/bin/dtvtuner_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Bluetooth
+#---------------------------------------------------------------------
+service bluetooth_diag /vendor/bin/bluetooth_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Wifi
+#---------------------------------------------------------------------
+service wifi_diag /vendor/bin/wifi_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# FMRadio
+#---------------------------------------------------------------------
+service fm_diag /vendor/bin/fm_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Camera driver
+#---------------------------------------------------------------------
+service cam_drv_diag /vendor/bin/cam_drv_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# IrDA
+#---------------------------------------------------------------------
+service irda_diag /vendor/bin/irda_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# VBATT
+#---------------------------------------------------------------------
+service batt_diag /vendor/bin/batt_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# AUDIO
+#---------------------------------------------------------------------
+service audio_diag /vendor/bin/audio_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# PMIC
+#---------------------------------------------------------------------
+service pmic_diag /vendor/bin/pmic_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# VIBRATOR
+#---------------------------------------------------------------------
+service vibrator_diag /vendor/bin/vibrator_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+######################################################################
+# For SW :0x2000-0x3FFF
+######################################################################
+#---------------------------------------------------------------------
+# File System Access
+#---------------------------------------------------------------------
+service fs_sys_call_diag /vendor/bin/fs_sys_call_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Handset
+#---------------------------------------------------------------------
+service khsdiag /vendor/bin/khsdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# KDFS
+#---------------------------------------------------------------------
+service kdfsdiag /vendor/bin/kdfsdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Diag shell
+#---------------------------------------------------------------------
+service kdiag_shell /vendor/bin/kdiag_shell
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# checksum (GANG/soft check sum )
+#---------------------------------------------------------------------
+service kchecksum_diag /vendor/bin/kchecksum_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Version etc.
+#---------------------------------------------------------------------
+service ktoolsdiag /vendor/bin/ktoolsdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Debug Func Client
+#---------------------------------------------------------------------
+service debugs_diag /vendor/bin/debugs_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# KC Error Log Client
+#---------------------------------------------------------------------
+service klogdiag /vendor/bin/klogdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Reset Log Client
+#---------------------------------------------------------------------
+service resetlog_diag /vendor/bin/resetlog_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Quality Statistics Logging Client
+#---------------------------------------------------------------------
+service qdlddiag /vendor/bin/qdlddiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Nand Lock
+#---------------------------------------------------------------------
+service mmc_wp_diag /vendor/bin/mmc_wp_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# SD Download
+#---------------------------------------------------------------------
+service ksddldiag /vendor/bin/ksddldiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+service kdiagsddl /vendor/bin/kdiagsddl
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+service storage_dl_kdiag /vendor/bin/storage_dl_kdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# FOTA Certification & Authentication
+#---------------------------------------------------------------------
+service kcf_dverify_diag /vendor/bin/kcf_dverify_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# FOTA update by diag command
+#---------------------------------------------------------------------
+service kfotantvif_diag /vendor/bin/kfotantvif_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# DNAND
+#---------------------------------------------------------------------
+service dnand_diag /vendor/bin/dnand_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# PROV
+#---------------------------------------------------------------------
+service prov_diag /vendor/bin/prov_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+
+#---------------------------------------------------------------------
+# BFSS
+#---------------------------------------------------------------------
+service bfss_diag /vendor/bin/bfss_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# QFPROM
+#---------------------------------------------------------------------
+service qfprom_kdiag /vendor/bin/qfprom_kdiag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# DLOAD
+#---------------------------------------------------------------------
+service kdload_diag /vendor/bin/kdload_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Platform
+#---------------------------------------------------------------------
+service kcpftest_diag /vendor/bin/kcpftest_diag
+    class kc_diag
+    user root
+    group root
+    oneshot
+
+#---------------------------------------------------------------------
+# Common
+#---------------------------------------------------------------------
+service kdiag_common /vendor/bin/kdiag_common
+    class core
+    oneshot
+
+######################################################################
+# For Android Framework :0x4000-0x5FFF
+######################################################################
+#---------------------------------------------------------------------
+# Diag Framework
+#---------------------------------------------------------------------
+service kdiagfwk /vendor/bin/kdiagfwk
+    class kcd_diag
+    user root
+    group root
+    oneshot
+
+
+#####################################################################
+# Config file for DIAG main service
+#
+#####################################################################
+service kdmd /vendor/bin/kdmd
+    class core
+    oneshot
+
+
+

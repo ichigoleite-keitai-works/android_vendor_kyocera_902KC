@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     This software is contributed or developed by KYOCERA Corporation.
+     (C) 2019 KYOCERA Corporation
+-->
+<FeatureConfig>
+    <Feature name="kcfp">
+
+        <!-- Softkey Configuration -->
+        <config key="SoftkeyType" value="Three"/>
+        <config key="SoftkeyIsInvisibleWhenEmpty" value="false"/>
+        <config key="SoftkeyAnimationDisabled" value="false"/>
+        <config-array key="SimpleSoftkeysPackages">
+            <config value="com.mobisystems.office.kyocera" />
+        </config-array>
+        <!-- Softkey Configuration for debug/test -->
+        <config key="DumpSoftkey" value="false"/>
+        <config key="DumpSoftkeyDetail" value="false"/>
+        <config key="DisablePending" value="false"/>
+
+        <!-- EndKey Configuration -->
+        <config key="DefaultEndKeyMode" value="0"/>
+        <config key="EndKeyBehaviorGuardTime" value="250"/>
+
+    </Feature>
+</FeatureConfig>

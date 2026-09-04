@@ -1,0 +1,2 @@
+<mail_package>jp.kyocera.fpmail</mail_package>
+<mail_receiver>jp.kyocera.fpmail.BackupRestoreReceiver</mail_receiver>

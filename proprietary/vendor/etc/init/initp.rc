@@ -1,0 +1,17 @@
+# This software is contributed or developed by KYOCERA Corporation.
+# (C) 2017 KYOCERA Corporation
+
+on property:kcfactory.kfbm.status=kfbm
+    start qcom-post-boot
+    start kfbmpower
+
+on property:kcfactory.kfbm.status=android
+    start kfbmpower-end 
+    stop kfbmpower
+
+on property:init.svc.bootanim=stopped
+    setprop init.default_encryption.trigger false
+
+on property:persist.kc.cmd.secadb=*
+    setprop kc.cmd.secadb ${persist.kc.cmd.secadb}
+

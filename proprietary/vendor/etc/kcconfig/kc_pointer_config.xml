@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     This software is contributed or developed by KYOCERA Corporation.
+     (C) 2019 KYOCERA Corporation
+-->
+
+<FeatureConfig>
+    <Feature name="pointer">
+        <config key="TouchCruiserSupported" value="false" />
+    </Feature>
+</FeatureConfig>

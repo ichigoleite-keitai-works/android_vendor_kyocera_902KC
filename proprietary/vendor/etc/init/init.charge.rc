@@ -1,0 +1,40 @@
+#This software is contributed or developed by KYOCERA Corporation.
+# (C) 2020 KYOCERA Corporation
+
+on boot
+    chown root system /sys/class/power_supply/battery/oem_input_suspend
+    chmod 0664 /sys/class/power_supply/battery/oem_input_suspend
+
+on property:ro.mode.kccharger=1
+    setprop sys.usb.config mass_storage
+    setprop debug.sf.nobootanimation 1
+    start qcom-post-boot
+    start charger
+
+on property:persist.vendor.chgdisabled=1
+    write /sys/class/power_supply/battery/oem_input_suspend 1
+
+on property:persist.vendor.chgdisabled=0
+    write /sys/class/power_supply/battery/oem_input_suspend 0
+
+on property:persist.vendor.batt_care.mode=*
+    write /sys/class/power_supply/battery/battery_care_mode ${persist.vendor.batt_care.mode}
+
+on property:ro.mode.kc_offchg_alert=1
+    stop charger
+    start kc_offchg_alert
+    start kc_offchg_led
+
+service kc_offchg_alert /vendor/bin/kc_offchg_alert
+    class late_start
+    user root
+    group root
+    disabled
+    oneshot
+
+service kc_offchg_led /vendor/bin/kc_offchg_led
+    class late_start
+    user root
+    group root
+    disabled
+    oneshot

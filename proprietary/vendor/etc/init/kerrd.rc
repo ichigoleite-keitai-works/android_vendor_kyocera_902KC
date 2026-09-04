@@ -1,0 +1,3 @@
+service kerrd /system/vendor/bin/kerrd
+    class core
+

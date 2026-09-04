@@ -1,0 +1,16 @@
+# This software is contributed or developed by KYOCERA Corporation.
+# (C) 2018 KYOCERA Corporation
+
+service lkspad /vendor/bin/lkspad
+    class core
+    user system
+    group system radio gps bluetooth audio media
+    socket lkspad stream 0666 system system
+
+on early-boot
+    chown system system /sys/kernel/kcpdsm/lkspad_client
+
+on post-fs
+    chown system system /vendor/pstore
+    chmod 0771 /vendor/pstore
+

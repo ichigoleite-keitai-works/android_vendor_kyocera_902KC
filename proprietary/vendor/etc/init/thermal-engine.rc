@@ -1,0 +1,10 @@
+#This software is contributed or developed by KYOCERA Corporation.
+#(C) 2018 KYOCERA Corporation
+
+on post-fs-data
+    # For security reasons, /data/vendor/thermal should always be empty.
+    # Do not place files or directories in /data/vendor/thermal
+    mkdir /data/vendor/thermal 0771 shell shell
+
+on property:kcfactory.kfbm.status=kfbm
+       write /sys/module/msm_thermal/parameters/enabled N

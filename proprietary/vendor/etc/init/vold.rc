@@ -1,0 +1,38 @@
+#This software is contributed or developed by KYOCERA Corporation.
+#(C) 2018 KYOCERA Corporation
+
+on post-fs-data
+    export SECONDARY_STORAGE /storage/sdcard1
+
+on init
+    mkdir /mnt/hidden 0770 system system
+    mkdir /mnt/hidden/staging 0770 system system
+    mkdir /mnt/hidden/rstaging 0770 system system
+
+service ecryptfs_encrypt /vendor/etc/ecryptfs-rewrite-file.sh /mnt/hidden/staging
+    class late_start
+    user root
+    group root
+    oneshot
+    disabled
+
+service ecryptfs_decrypt /vendor/etc/ecryptfs-decrypt-allfiles.sh /mnt/hidden/staging /mnt/hidden/rstaging
+    class late_start
+    user root
+    group root
+    oneshot
+    disabled
+
+service ecryptfs_enc_chk /vendor/bin/ecryptfs_stat_dir /mnt/hidden/staging
+    class late_start
+    user root
+    group root
+    oneshot
+    disabled
+
+service ecryptfs_dec_chk /vendor/bin/ecryptfs_stat_dir /mnt/hidden/staging plain
+    class late_start
+    user root
+    group root
+    oneshot
+    disabled

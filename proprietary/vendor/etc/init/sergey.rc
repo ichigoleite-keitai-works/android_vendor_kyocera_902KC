@@ -1,0 +1,10 @@
+# This software is contributed or developed by KYOCERA Corporation.
+# (C) 2019 KYOCERA Corporation
+#
+
+service sergey_bugreport /system/bin/dumpstate -q -d -z -o /storage/emulated/0/Android/data/jp.kyocera.corp.manager/bugreport/bugreport
+    class late_start
+    user root
+    group root system shell log sdcard_r sdcard_rw media_rw
+    disabled
+    oneshot
