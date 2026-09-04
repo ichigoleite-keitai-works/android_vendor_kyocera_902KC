@@ -866,7 +866,7 @@ PRODUCT_COPY_FILES += \
     vendor/kyocera/902KC/proprietary/vendor/lib/vendor.qti.voiceprint@1.0.so:vendor/lib/vendor.qti.voiceprint@1.0.so \
     vendor/kyocera/902KC/proprietary/vendor/manifest.xml:vendor/manifest.xml \
     vendor/kyocera/902KC/proprietary/vendor/package/CTA/.preloadspec:vendor/package/CTA/.preloadspec \
-    vendor/kyocera/902KC/proprietary/vendor/package/CTA/vendor/vendor.prop:vendor/package/CTA/vendor/vendor.prop \
+    vendor/kyocera/902KC/proprietary/vendor/package/CTA/system/vendor/vendor.prop:vendor/package/CTA/system/vendor/vendor.prop \
     vendor/kyocera/902KC/proprietary/vendor/radio/qcril_database/qcril.db:vendor/radio/qcril_database/qcril.db \
     vendor/kyocera/902KC/proprietary/vendor/ueventd.rc:vendor/ueventd.rc
 PRODUCT_PACKAGES += \
